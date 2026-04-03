@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">mvvm-test</string>
+    <string name="input_name">请输入用户名</string>
+    <string name="input_password">请输入密码</string>
+    <string name="insert">保存</string>
+    <string name="title">列表</string>
+</resources>

@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "ServiceDemo"
 include ':app'
 include ':car-connect'
+include ':mvvm-test'

@@ -1,0 +1,24 @@
+package com.martin.mvvm.db.dao;
+
+import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
+
+import com.martin.mvvm.db.bean.User;
+
+import java.util.List;
+
+@Dao
+public interface UserDao {
+
+    @Query("SELECT * FROM user")
+    LiveData<List<User>> getAllUsers();
+
+    @Update
+    void updateUser(User user);
+
+    @Insert
+    void insertUser(User user);
+}
