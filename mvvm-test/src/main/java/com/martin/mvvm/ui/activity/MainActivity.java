@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private UserViewModel userViewModel;
     private EditText nameEditText;
     private EditText passwordEditText;
-    private static int userIdCounter = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 初始化 ViewModel
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+        adapter.setItemDeleteListener(userViewModel::delete);
         // 观察 LiveData
         userViewModel.getUsers().observe(this, adapter::setUsers);
 
@@ -42,11 +42,10 @@ public class MainActivity extends AppCompatActivity {
         saveButton.setOnClickListener(v -> {
             String name = nameEditText.getText().toString();
             String password = passwordEditText.getText().toString();
-            User user = new User();
-            user.setId(userIdCounter++);
-            user.setName(name);
-            user.setPassword(password);
             if (!name.isEmpty() && !password.isEmpty()) {
+                User user = new User();
+                user.setName(name);
+                user.setPassword(password);
                 userViewModel.insert(user);
                 nameEditText.setText("");
                 passwordEditText.setText("");
