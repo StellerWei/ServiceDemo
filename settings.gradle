@@ -23,3 +23,5 @@ rootProject.name = "ServiceDemo"
 include ':app'
 include ':car-connect'
 include ':mvvm-test'
+// include ':kotlin-project'
+include ':room-livedata-recyclerview'
