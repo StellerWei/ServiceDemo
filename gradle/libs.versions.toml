@@ -10,6 +10,9 @@ constraintlayout = "2.1.4"
 room = "2.3.0"
 livedata = "2.8.6"
 viewmodel = "2.8.6"
+kotlin = "1.9.24"
+coreKtx = "1.10.1"
+cardView = "1.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -23,7 +26,10 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "livedata" }
 viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "viewmodel" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+carView = {group = "androidx.cardview", name = "cardview", version.ref = "cardView"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">room-livedata-recyclerview</string>
+    <string name="add">添加</string>
+    <string name="input_password">输入密码</string>
+    <string name="input_name">输入用户名</string>
+</resources>
